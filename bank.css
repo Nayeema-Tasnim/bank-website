@@ -1,0 +1,255 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: catamaran,sans-serif;
+    text-transform: capitalize;
+}
+
+.logo{
+    height: 89.69px;
+    padding: 10px 0px;
+    text-align: center;
+}
+nav{
+    height: 50px;
+    background-image: linear-gradient(to right,rgb(126, 189, 126),rgb(22, 160, 22));
+}
+nav ul{
+    text-align: center;
+}
+nav ul li{
+    display: inline-block; 
+    line-height: 45px;
+    list-style: none;
+}
+nav a{
+    position: relative;
+    font-size: 16px;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+}
+
+nav .btn{
+    background-color: transparent;
+    color: white;
+    font-size: 18px;
+    border: none;
+    height: 40px;
+    width: 100px;
+    transition: .5s;
+}
+
+nav .btn:hover{
+    border: 2px solid white;
+    border-radius:5px ;
+    background-color: rgb(43, 82, 69);
+}
+
+ ul li a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 3px;
+    width: 100%;
+    background-color: #fdfefd;
+    transition: .5s;
+    transform: scaleX(0);
+    transform-origin: left;
+    cursor: pointer;
+}
+
+ul li a:hover::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    height: 3px;
+    width: 100%;
+    background-color: #eff3f0;
+    transform: scalex(1);
+}
+
+.left {
+    position:absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: rgba(116, 25, 25, 0.418);
+    bottom: 35%;
+    border: 5px solid rgb(255, 255, 255);
+    left: 20px;
+    font-size: 30px;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+
+
+.right{
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: rgba(139, 31, 33, 0.333);
+    bottom: 35%;
+    border: 5px solid rgba(255, 255, 255);
+    right: 20px;
+    font-size: 30px;
+    font-weight: bolder;
+    transition: .5s;
+}
+.right:hover{
+    background-color: rgb(9, 78, 12);
+    color: white;
+}
+
+
+.left:hover{
+    background-color: rgb(9, 78, 12);
+    color: white;
+}
+body{
+    position: relative;
+}
+
+.main{
+    position: absolute;
+    height: 382px;
+    width: 100%;
+}
+
+
+.img{
+    margin: 15px;
+    width: 98%;
+}
+
+.form-box
+{   
+    height: 400px;
+    width: 300px;
+    bottom: 10px;
+}
+
+.logMain{
+    transform: scale(0);
+    position: relative; 
+    top: 50%;
+    left: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 460px;
+    width: 300px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+    border: 3px solid rgb(40, 98, 52);
+    border-radius: 5px;
+   
+}
+
+.logMain.activ{
+    transform: scale(1);
+}
+
+.logMain .form-box.login{
+    margin-bottom: 30px;
+    transition:.18s ease ;
+    transform: translateX(0);
+}
+
+.logMain.active .form-box.login{
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.logMain .form-box.register{
+    position: absolute;
+    transform: translateX(400px);
+    transition:.18s ease ;
+   
+   
+}
+
+.error{
+    color: red;
+    font-size: 10px;
+    display: none;
+}
+
+.logMain.active .form-box.register{
+    transform: translateX(0);
+}
+.logMain.active{
+    height: 430px;
+}
+
+
+
+
+p{
+    position: relative;
+    top: 15px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+input[placeholder]{
+    padding-left: 5px;
+    margin-top: 5px;
+}
+
+i{
+    position: absolute;
+    left: 257px;
+    bottom: 350px;
+    padding-right: 5px;
+    padding-top: 5px;
+    right: 0;
+    font-size: 26px;
+    
+}
+
+i:hover{
+    color: red;
+   ;
+}
+   
+form{
+    margin: 25px;
+    margin-top: 40px;
+}
+
+label{
+    font-size: 15px;
+}
+.register-link a:focus{
+    text-decoration: underline;
+}
+
+form button{
+    height: 30px;
+    width: 200px;
+    border-radius: 5px;
+    background-color: rgb(64, 104, 222);
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.labclass {
+    font-size: 13px;
+}
+
+input{
+    outline: none;
+    background: transparent;
+    border-top: none;
+    border-left:none ;
+    border-right: none;
+}

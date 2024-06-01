@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islami Bank</title>
+    <link rel="stylesheet" href="bank.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body>
+    <!-- logo -->
+    <div class="logo">
+        <img src="logo.png" alt="" height="69px" width="200px">
+    </div>
+    <!-- navbar -->
+   <nav>
+    <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#">about IBBLPLC</a></li>
+        <li><a href="#">deposit</a></li>
+        <li><a href="#">investment</a></li>
+        <li><a href="#">card</a></li>
+        <li><a href="#">deposit</a></li>
+        <li><a href="#">services</a></li>
+        <li><a href="#">digital banking</a></li>
+        <li><a href="#">media room </a></li>
+        <li><a href="#">location</a></li>
+        <li><a href="#">career</a></li>
+        <li><button class="btn">log in</button></li>
+    </ul>
+   </nav> 
+   
+   <section class="main">
+    <button class="left"><</button>
+    <img src="" class="img">
+    <button class="right">></button>
+   </section>
+ 
+   <div class="logMain">
+<div class="login form-box">
+    <p>login</p>
+    
+    <i class="fa-solid fa-xmark"></i>
+
+    <form action="" name="formfill" onsubmit="return validation()">
+        <label for="email">email</label><br>
+        <input class="email" name="Email" style="width: 200px; height: 25px;" type="email" placeholder="email" required><br><br>
+        <label for="username">username</label><br>
+        <input class="username" name="Username" type="text" style="width: 200px; height: 25px;" placeholder="username" required><br><br>
+        <label for="password">password</label><br>
+        <input class="password" style="width: 200px; height: 25px;" type="password" placeholder="password" required><br><br>
+        <div class="labclass sp">
+            <label><input type="checkbox"> remember me <a href="#">forget password?</a></label>
+        </div>
+        <br><br>
+        <button class="log" onclick="this.style.backgroundColor='red'" type="submit">log in</button><br><br>
+        <label for="" class="labclass">don't have an account? <a style="text-decoration: none; font-weight: bold;" class="register-link" href="#">register</a></label>
+    </form>
+</div>
+
+<div class="register form-box">
+    <p>register</p>
+    
+    <i class="fa-solid fa-xmark"></i>
+
+    <form action="" name="formfill" onsubmit="return validateForm(event)">
+        <label for="">email</label><br>
+        <input style="width: 200px;height: 25px;" id="eerror" type="email" placeholder="email" required><br><br>
+<!-- <span class="error" id="eerr">Please enter a valid email address.</span><br> -->
+
+        <label for="">username</label><br>
+        <input type="text" style="width: 200px;height: 25px;" id="usererror"  placeholder="username" required><br><br>
+        <!-- <span class="error" id="uerr">Please enter a valid username.atleast 8 characters</span><br> -->
+
+        <label for="">password</label><br>
+        <input style="width: 200px;height: 25px;" type="password" id="passerror" placeholder="password" required><br><br>
+        <!-- <span class="error" id="perr">password must be atleast 6 characters long</span><br> -->
+
+        <label >confirm password  </label><br>
+            <input  type="password" style="width: 200px;height: 25px;" id="cerror" placeholder="retype passsword" required>
+        <br><br>
+        <!-- <span class="error" id="cerr">your confirm passswordis wrong</span><br><br> -->
+
+        <button style="width: 100px; height: 25px;font-size: 13px;font-weight: bold;" type="submit">sign up</button><br><br>
+
+       <label class="labclass"> already have an account? <a style="text-decoration: none;
+        font-weight: bold;" class="login-link" href="#">login</a></label>
+        <br><br>
+
+    </form>
+</div>
+   </div>
+
+ 
+
+   <script src="bank.js"></script>
+</body>
+</html>

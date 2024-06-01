@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            
+            align-items: center;
+            justify-content: center;
+           
+        }
+        .f{
+            height: 150px;
+            width: 300px;
+            margin: 20px;
+            padding: 20px;
+            font-size:20px ;
+        }
+        .f:nth-child(1){
+            background-color: greenyellow;
+        }
+
+        .f:nth-child(2){
+            background-color: rgb(197, 181, 62);
+        }
+
+        .f:nth-child(3){
+            background-color: rgb(72, 104, 217);
+        }
+
+        .f:nth-child(5){
+           height: 170px;
+            background-color: rgb(50, 133, 158);
+            width: 600px;
+        }
+
+        .f:nth-child(4){
+            height: 170px;
+            background-color: rgb(216, 61, 209);
+            width: 600px;
+        }
+        input{
+            height: 20px;
+           width: 500px;
+            outline: none;
+        }
+        button{
+            height: 30px;
+            width: 100px;
+            background-color: darkgoldenrod;
+            color: black;
+            border: none;
+        }
+        
+        .t{
+            font-size: 50px;
+        }
+
+        h1{
+            text-align: center;
+           margin: 30px;
+           font-size: 40px;
+        }
+
+    </style>
+</head>
+<body>
+ 
+    <h1>Welcome to Islami Bank</h1>
+    <div class="container">
+        <div class="f1 f">
+            <h2>Deposit</h2>
+            <div class="t" id="f11">$00</div>
+        </div>
+        <div class="f2 f">
+            <h2>Withdraw</h2>
+            <div class="t" id="f22">
+                $00
+            </div>
+        </div>
+        <div class="f3 f">
+            <h2>Balance</h2>
+            <div class="t" id="f33">$00</div>
+        </div>
+    
+        <div class="f4 f">
+            <h2>Please Deposit</h2>
+            <input type="number" id="dep" placeholder="Enter your deposit money"><br><br>
+            <button onclick="depositt()" class="sub">Deposit</button>
+        </div>
+    
+        <div class="f5 f">
+            <h2>Please Withdraw</h2>
+            <input type="number" id="withdrawAmount" placeholder="Enter your withdrawal amount"><br><br>
+            <button onclick="withdraww()" class="submit">Withdraw</button>
+        </div>
+    </div>
+    
+    <script>
+        let balance = 0;
+        let deposit = 0;
+        let withdraw = 0;
+        function depositt(){
+            let depositAmount = parseFloat(document.getElementById('dep').value);
+            if(!isNaN(depositAmount) && depositAmount > 0){
+                balance += depositAmount;
+                deposit += depositAmount;
+                update();
+                
+            }
+            else{
+                alert('Enter valid number');
+            }
+
+        document.getElementById('dep').value = "";
+        }
+
+        function withdraww(){
+            let withdrawAmount = parseFloat(document.getElementById('withdrawAmount').value);
+            if(!isNaN(withdrawAmount) && withdrawAmount > 0){
+                if(withdrawAmount <= balance){
+                    balance -= withdrawAmount;
+                    withdraw += withdrawAmount;
+                    update(); 
+                }
+                else{
+                    alert('Insufficient balance');
+                }
+           
+            }
+            else {
+                alert('Enter valid amount');
+            }
+            document.getElementById('withdrawAmount').value = '';
+        }
+
+        function update(){
+            document.getElementById('f33').textContent = `$${balance.toFixed(2)}`;
+            document.getElementById('f11').textContent = `$${deposit.toFixed(2)}`;
+            document.getElementById('f22').textContent = `$${withdraw.toFixed(2)}`;
+        }
+
+    </script>
+    
+</body>
+</html>
